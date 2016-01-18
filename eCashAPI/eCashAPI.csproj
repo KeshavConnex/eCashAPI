@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D193941-BA4F-4E7E-A40F-4F1799587383}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eCashAPI</RootNamespace>
+    <AssemblyName>eCashAPI</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Converter\ECashToApiConverter.cs" />
+    <Compile Include="DTO\BIM\ConsumerRewardRequest.cs" />
+    <Compile Include="DTO\BIM\MerchantBarcodeSaleRequest.cs" />
+    <Compile Include="DTO\BIM\MerchantBarcodeVoidRequest.cs" />
+    <Compile Include="DTO\BIM\Reward.cs" />
+    <Compile Include="DTO\BIM\ServicePinResponse.cs" />
+    <Compile Include="DTO\BIM\TransactionDetailsRequest.cs" />
+    <Compile Include="DTO\BIM\TransactionSummaryRequest.cs" />
+    <Compile Include="DTO\eCashDataTypes\Account.cs" />
+    <Compile Include="DTO\eCashDataTypes\Bank.cs" />
+    <Compile Include="DTO\eCashDataTypes\Barcode.cs" />
+    <Compile Include="DTO\eCashDataTypes\Consumer.cs" />
+    <Compile Include="DTO\eCashDataTypes\Credentials.cs" />
+    <Compile Include="DTO\eCashDataTypes\CustomField.cs" />
+    <Compile Include="DTO\eCashDataTypes\Pin.cs" />
+    <Compile Include="DTO\eCashDataTypes\Result.cs" />
+    <Compile Include="DTO\eCashDataTypes\Reward.cs" />
+    <Compile Include="DTO\eCashDataTypes\Token.cs" />
+    <Compile Include="DTO\eCashDataTypes\Transaction.cs" />
+    <Compile Include="DTO\eCash\BankLoginRequest.cs" />
+    <Compile Include="DTO\eCash\BarcodeRequest.cs" />
+    <Compile Include="DTO\eCash\BarcodeResponse.cs" />
+    <Compile Include="DTO\eCash\CDWAllowedRequest.cs" />
+    <Compile Include="DTO\eCash\CDWAllowedResponse.cs" />
+    <Compile Include="DTO\eCash\CDWAmountRequest.cs" />
+    <Compile Include="DTO\eCash\ChangePinRequest.cs" />
+    <Compile Include="DTO\eCash\ChangePinResponse.cs" />
+    <Compile Include="DTO\eCash\EnrollmentStatusRequest.cs" />
+    <Compile Include="DTO\eCash\ManualEnrollmentRequest.cs" />
+    <Compile Include="DTO\eCash\ManualEnrollmentResponse.cs" />
+    <Compile Include="DTO\eCash\MerchantBarcodeSaleRequest.cs" />
+    <Compile Include="DTO\eCash\MerchantBarcodeSaleResponse.cs" />
+    <Compile Include="DTO\eCash\MerchantBarcodeVoidRequest.cs" />
+    <Compile Include="DTO\eCash\MerchantBarcodeVoidResponse.cs" />
+    <Compile Include="DTO\eCash\OfflineBarcodeRequest.cs" />
+    <Compile Include="DTO\eCash\OfflineBarcodeResponse.cs" />
+    <Compile Include="DTO\eCash\PersonalDetailsRequest.cs" />
+    <Compile Include="DTO\eCash\SecurityVerificationRequest.cs" />
+    <Compile Include="DTO\eCash\SelectBankAccountRequest.cs" />
+    <Compile Include="DTO\eCash\SelectBankRequest.cs" />
+    <Compile Include="DTO\eCash\TokenRequest.cs" />
+    <Compile Include="DTO\eCash\TokenResponse.cs" />
+    <Compile Include="DTO\eCash\TransactionDetail.cs" />
+    <Compile Include="DTO\eCash\TransactionDetailRequest.cs" />
+    <Compile Include="DTO\eCash\TransactionDetailResponse.cs" />
+    <Compile Include="DTO\eCash\TransactionReport.cs" />
+    <Compile Include="DTO\eCash\TransactionSummary.cs" />
+    <Compile Include="DTO\eCash\TransactionSummaryRequest.cs" />
+    <Compile Include="DTO\eCash\TransactionSummaryResponse.cs" />
+    <Compile Include="Utilities\CommonFunction.cs" />
+    <Compile Include="Utilities\Constants.cs" />
+    <Compile Include="Converter\ApiToECashConverter.cs" />
+    <Compile Include="DTO\BIM\Error.cs" />
+    <Compile Include="DTO\BIM\BankAccount.cs" />
+    <Compile Include="DTO\BIM\CheckCDWAllowRequest.cs" />
+    <Compile Include="DTO\BIM\CheckPinRequest.cs" />
+    <Compile Include="DTO\BIM\ConfirmCDWAmountRequest.cs" />
+    <Compile Include="DTO\BIM\ContinueEnrollmentLoginRequest.cs" />
+    <Compile Include="DTO\BIM\FieldTableEntity.cs" />
+    <Compile Include="DTO\BIM\GenerateBarcodeRequest.cs" />
+    <Compile Include="DTO\BIM\GenerateTokenRequest.cs" />
+    <Compile Include="DTO\BIM\GenerateTokenResponse.cs" />
+    <Compile Include="DTO\BIM\MatchEnrollmentRequest.cs" />
+    <Compile Include="DTO\BIM\OfflineBarcodeRequest.cs" />
+    <Compile Include="DTO\BIM\Payload.cs" />
+    <Compile Include="DTO\BIM\QuestionAnswerEntity.cs" />
+    <Compile Include="DTO\BIM\SelectBankByGUIDRequest.cs" />
+    <Compile Include="DTO\BIM\SelectBankByIdRequest.cs" />
+    <Compile Include="DTO\BIM\ServiceResponse.cs" />
+    <Compile Include="DTO\BIM\StartEnrollmentRequest.cs" />
+    <Compile Include="DTO\BIM\TransactionDetail.cs" />
+    <Compile Include="DTO\BIM\TransactionSummary.cs" />
+    <Compile Include="DTO\BIM\UpdatePinRequest.cs" />
+    <Compile Include="DTO\BIM\VerifyPinRequest.cs" />
+    <Compile Include="DTO\eCash\BankLoginResponse.cs" />
+    <Compile Include="DTO\eCash\Enrollment.cs" />
+    <Compile Include="DTO\eCash\SecurityVerificationResponse.cs" />
+    <Compile Include="DTO\eCash\SelectBankResponse.cs" />
+    <Compile Include="DTO\eCash\PersonalDetailsResponse.cs" />
+    <Compile Include="ECashService.cs" />
+    <Compile Include="IBIMService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Refit, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\refit.2.4.1\lib\Portable-Net45+NetCore45+WP8+WPA81\Refit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets" Condition="Exists('..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
